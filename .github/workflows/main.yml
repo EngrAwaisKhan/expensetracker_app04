@@ -39,11 +39,13 @@ jobs:
           # Yarn command
           cmd: install
 
-      - name: all permission
-        run: npm install -g --unsafe-perm=true --allow-root
+      
           
       - name: Create Build
         run: yarn build
+
+      - name: all permission
+        run: npm install -g --unsafe-perm=true --allow-root
         
       - name: Installing Surge
         run: npm install -g surge
