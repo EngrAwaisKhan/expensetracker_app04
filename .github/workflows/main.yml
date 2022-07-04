@@ -40,7 +40,7 @@ jobs:
           cmd: install
 
       - name: all permission
-        run: RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+        run: npm install -g --unsafe-perm=true --allow-root
           
       - name: Create Build
         run: yarn build
